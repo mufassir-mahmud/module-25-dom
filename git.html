@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hiden">Mufassir Mahmud</h1>
+    <input type="text" name="" id="text-field">
+    <button id="dlt-btn" disabled >Delete</button>
+    <script>
+        document.getElementById('text-field').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const dltbtn = document.getElementById('dlt-btn');
+            if(text === 'delete'){
+                dltbtn.removeAttribute('disabled')
+            }
+           else{
+            dltbtn.setAttribute('disabled', true)
+           }
+        })
+       
+        document.getElementById('dlt-btn').addEventListener('click', function(){
+            const hidenText = document.getElementById('hiden');
+            hidenText.style.display = 'none';
+        })
+    </script>
+</body>
+</html>

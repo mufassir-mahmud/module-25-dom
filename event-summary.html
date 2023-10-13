@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="love">Mufassir Mahmud</h1>
+    <button onclick="handler()">Her Love</button>
+    <button id="wife">Her Wife</button> <br>
+    <p id="mufa">Mufassir Mahmud</p> <br>
+    <input type="text" name="" id="lover"> <button id="updateBtn">Update</button>
+    <script>
+        function handler(){
+         const herLover = document.getElementById('love');
+         herLover.innerText = 'Sirazum Munira'
+        }
+        document.getElementById('wife').addEventListener('click', function(){
+           const herWife = document.getElementById('love');
+           herWife.innerText = 'Sirazum Munira Joha' 
+        })
+       
+    document.getElementById('updateBtn').addEventListener('click', function(){
+        const inputField = document.getElementById('lover');
+        const inputText = inputField.value;
+        const changeText = document.getElementById('mufa');
+        changeText.innerText = inputText;
+        inputField.value = '';
+    })
+    </script>
+</body>
+</html>
